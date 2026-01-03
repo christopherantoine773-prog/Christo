@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Dope Pain</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial}
+body{
+  min-height:100vh;
+  background:
+    linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+    url("COLLE_ICI_TON_BASE64") center/cover no-repeat;
+  display:flex;
+  justify-content:center;
+  color:white;
+}
+.container{
+  width:92%;
+  max-width:420px;
+  margin-top:80px;
+  text-align:center;
+}
+h1{margin-bottom:25px}
+.badge{
+  color:#1da1f2;
+  margin-left:6px;
+  animation:glow 1.3s infinite alternate;
+}
+@keyframes glow{
+  from{text-shadow:0 0 4px #1da1f2}
+  to{text-shadow:0 0 12px #1da1f2}
+}
+.card{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  background:rgba(255,255,255,0.18);
+  padding:15px;
+  margin:14px 0;
+  border-radius:16px;
+}
+.card i{font-size:24px}
+.info{text-align:left}
+.info span{font-weight:bold}
+.info small{opacity:.85}
+button{
+  margin-top:20px;
+  padding:10px 18px;
+  border:none;
+  border-radius:20px;
+  background:#1da1f2;
+  color:white;
+  font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+  <h1>Dope Pain <span class="badge">✔</span></h1>
+
+  <div class="card"><i class="fab fa-tiktok"></i>
+    <div class="info"><span>TikTok</span><small>12 803 abonnés</small></div>
+  </div>
+
+  <div class="card"><i class="fab fa-telegram"></i>
+    <div class="info"><span>Telegram</span><small>3 402 abonnés</small></div>
+  </div>
+
+  <div class="card"><i class="fab fa-youtube"></i>
+    <div class="info"><span>YouTube</span><small>Indisponible</small></div>
+  </div>
+
+  <div class="card"><i class="fab fa-snapchat"></i>
+    <div class="info"><span>Snapchat</span><small>5 104 abonnés</small></div>
+  </div>
+
+  <div class="card"><i class="fas fa-video"></i>
+    <div class="info"><span>CapCut</span><small>2 205 abonnés</small></div>
+  </div>
+
+  <button onclick="playMusic()">▶ Activer le son</button>
+</div>
+
+<audio id="music" loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+function playMusic(){
+  document.getElementById("music").play();
+}
+</script>
+
+</body>
+</html>
